@@ -53,6 +53,18 @@ class LinkedList:
             return head
         raise Exception("The list is empty.")
     
+    def size(self):
+        count = 0
+        marker = self.__root
+        while marker:
+            count += 1
+            marker = marker.get_next()
+        return count
+
+
+
+
+
 
 class Queue:
     def __init__(self):
@@ -68,7 +80,7 @@ class Queue:
         self.linkedlist.find(node)
 
     def len():
-        pass
+        self.linkedlist.size()
 
 
 
