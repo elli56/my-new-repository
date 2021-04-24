@@ -54,6 +54,29 @@ class LinkedList:
         raise Exception("The list is empty.")
     
 
+class Queue:
+    def __init__(self):
+        self.linkedlist = LinkedList():
+
+    def push():
+        pass
+
+    def pop():
+        pass
+
+    def find(node):
+        pass
+
+    def len():
+        pass
+
+
+
+
+
+
+
+
 
 
 
