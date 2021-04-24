@@ -15,7 +15,7 @@ class Node:
         return self.__next
     
     def print_details(self):
-        print f"node: {self.data}"
+        print(f"node: {self.data}")
     
 
 
@@ -26,11 +26,17 @@ class LinkedList:
     def get_root(self):
         return self.__root
 
-    def add_to_head_list(self, node):
-        if self.__root:
-            self.__root.set_next(node)
-        else:
+    def add_to_last_of_list(self, node):
+        if not self.__root:
             self.__root = node
+        else:
+            marker = self.__root
+            while marker:
+                if not marker.get_next():
+                    marker.set_next(node)
+                    return
+                marker = marker.get_next()
+                            
 
     def print_list(self):
         marker = self.__root
@@ -68,20 +74,22 @@ class LinkedList:
 
 class Queue:
     def __init__(self):
-        self.linkedlist = LinkedList():
+        self.linkedlist = LinkedList()
 
-    def push(node):
-        self.linkedlist.add_to_head_list(node)
+    def push(self, node):
+        self.linkedlist.add_to_last_of_list(node)
 
-    def pop():
-        self.linkedlist.remove_first()
+    def pop(self): # В моем случае ошибка этот метод удаляет не из конца а из начала
+        return self.linkedlist.remove_first()
 
-    def find(node):
-        self.linkedlist.find(node)
+    def find(self, node):
+        return self.linkedlist.find(node)
 
-    def len():
-        self.linkedlist.size()
+    def len(self):
+        return self.linkedlist.size()
 
+    def print_all(self):
+        self.linkedlist.print_list()
 
 
 
