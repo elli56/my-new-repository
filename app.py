@@ -26,7 +26,7 @@ class LinkedList:
     def get_root(self):
         return self.__root
 
-    def add_to_list(self, node):
+    def add_to_head_list(self, node):
         if self.__root:
             self.__root.set_next(node)
         else:
@@ -58,14 +58,14 @@ class Queue:
     def __init__(self):
         self.linkedlist = LinkedList():
 
-    def push():
-        pass
+    def push(node):
+        self.linkedlist.add_to_head_list(node)
 
     def pop():
-        pass
+        self.linkedlist.remove_first()
 
     def find(node):
-        pass
+        self.linkedlist.find(node)
 
     def len():
         pass
